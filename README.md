@@ -1,2 +1,6 @@
-# Data-PT-9-TeamProject-2-team-2
-# Data-PT-9-TeamProject-2-team-2
+Progetto numero 2
+Analisi, pulizia, visualizzazione e predizione del dataset https://www.kaggle.com/datasets/missionjee/car-sales-report/data
+
+Tech Lead : Simone Piantoni
+PM : Valentina Randazzo
+Developer : Serena Tempesta, Matteo Bombieri
