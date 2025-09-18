@@ -1,1 +1,24 @@
 venv/
+
+# macOS
+.DS_Store
+
+# virtual env
+.venv/
+venv/
+
+# data
+data/
+data/raw/
+data/processed/
+
+# notebook outputs
+.ipynb_checkpoints/
+
+# mappings templates and backups
+**/*_template.csv
+**/*_backup.csv
+
+# others
+*.pyc
+__pycache__/
