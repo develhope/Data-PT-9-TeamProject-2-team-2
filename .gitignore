@@ -8,7 +8,6 @@ venv/
 venv/
 
 # data
-data/
 data/raw/
 data/processed/
 
