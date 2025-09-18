@@ -20,3 +20,13 @@ data/
 # others
 *.pyc
 __pycache__/
+# raw data (local copies)
+data/raw/
+
+# notebook temp & mapping templates
+.ipynb_checkpoints/
+notebook/mappings/*_template.csv
+notebook/mappings/*_backup.csv
+
+# macOS
+.DS_Store
