@@ -8,7 +8,7 @@ venv/
 venv/
 
 # data
-
+data/
 
 # notebook outputs
 .ipynb_checkpoints/
