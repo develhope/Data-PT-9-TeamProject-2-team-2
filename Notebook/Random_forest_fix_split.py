@@ -53,10 +53,10 @@ print(f"Migliori Parametri Trovati: {random_search.best_params_}")
 print(f"Miglior R-quadro (su Cross-Validation): {random_search.best_score_:.4f}")
 
 # 4. SALVATAGGIO DEI RISULTATI
-# 4. SALVATAGGIO DEI RISULTATI NELLA CARTELLA data/processed 💾
-MODEL_PATH = '../data/processed/best_random_forest_model.pkl'
-X_TEST_PATH = '../data/processed/X_test_for_evaluation.csv'
-Y_TEST_PATH = '../data/processed/y_test_for_evaluation.csv'
+# 4. SALVATAGGIO DEI RISULTATI NELLA CARTELLA data/results 
+MODEL_PATH = '../data/results/best_random_forest_model.pkl'
+X_TEST_PATH = '../data/results/X_test_for_evaluation.csv'
+Y_TEST_PATH = '../data/results/y_test_for_evaluation.csv'
 
 try:
     # Salva il miglior modello

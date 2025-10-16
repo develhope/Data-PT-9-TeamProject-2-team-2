@@ -3,9 +3,9 @@ from sklearn.metrics import mean_squared_error, r2_score
 import numpy as np
 import pickle 
 
-MODEL_PATH = '../data/processed/best_random_forest_model.pkl'
-X_TEST_PATH = '../data/processed/X_test_for_evaluation.csv'
-Y_TEST_PATH = '../data/processed/y_test_for_evaluation.csv'
+MODEL_PATH = '../data/results/best_random_forest_model.pkl'
+X_TEST_PATH = '../data/results/X_test_for_evaluation.csv'
+Y_TEST_PATH = '../data/results/y_test_for_evaluation.csv'
 
 print("Inizio della valutazione del modello...")
 try:
