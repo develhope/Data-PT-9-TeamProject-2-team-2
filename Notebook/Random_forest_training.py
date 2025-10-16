@@ -12,7 +12,7 @@ df = pd.read_csv(r"../data/processed/database_cleaned_2.csv")
 target_variable = 'Price'
 y = df[target_variable]
 # Rimozione delle colonne non necessarie per la predizione
-features = df.drop(columns=['Date', target_variable])
+features = df.drop(columns=['Date', 'Annual Income', target_variable])
 
 # Identificazione delle colonne categoriche
 categorical_features = features.select_dtypes(include=['object']).columns
@@ -33,10 +33,10 @@ print(f"Dimensioni Test Set (X_test): {X_test.shape}")
 
 ## Addestramento del Modello Random Forest
 
-# Inizializza il modello Random Forest Regressor 
-rf_model = RandomForestRegressor(n_estimators=100, random_state=69, n_jobs=-1)
+# Inizializzazione del modello Random Forest Regressor
+rf_model = RandomForestRegressor(n_estimators=300, random_state=69, n_jobs=-1)
 
-# Addestra il modello sul set di training
+# Addestramento del modello sul set di training
 rf_model.fit(X_train, y_train)
 print("\nAddestramento del modello Random Forest completato.")
 
