@@ -8,7 +8,8 @@ venv/
 venv/
 
 # data
-data/
+data/processed/
+data/cars.csv
 
 # notebook outputs
 .ipynb_checkpoints/
