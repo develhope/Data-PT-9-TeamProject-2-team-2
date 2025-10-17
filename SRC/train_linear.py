@@ -4,7 +4,7 @@
 """
 Train Linear Regression (baseline) sul dataset Car Sales.
 
-Output prodotti (tutti sotto data/processed/):
+Output prodotti (tutti sotto data/results/):
 - splits/<split_name>.csv                         → indici train/test per garantire stesso split in tutti i modelli
 - models/linear_model_pipeline.joblib             → pipeline + modello addestrato (pronto per inferenza)
 - models/linear_metrics.json                      → metriche di valutazione (MAE, RMSE, R2)
@@ -62,16 +62,17 @@ def main():
     args = parse_args()
 
     # --------------------------------------------------------
-    # 3) Definizione cartelle d'uscita (tutte in data/processed)
+    # 3) Definizione cartelle d'uscita (tutte in data/results)
     # --------------------------------------------------------
     REPO_ROOT = get_repo_root()
-    PROC_DIR  = REPO_ROOT / "data" / "processed"
-    RAW_FILE  = PROC_DIR / "database_cleaned_2.csv"   # sorgente già pulita
-
-    OUT_SPLITS = PROC_DIR / "splits"
-    OUT_MODELS = PROC_DIR / "models"
-    OUT_PREDS  = PROC_DIR / "predictions"
-    OUT_FIGS   = PROC_DIR / "figures"
+    DATA_DIR   = REPO_ROOT / "data"
+    PROC_DIR   = DATA_DIR / "processed"
+    RAW_FILE   = PROC_DIR / "database_cleaned_2.csv" 
+    RESULTS_DIR = DATA_DIR / "results"                 # <- nuova root degli output
+    OUT_SPLITS  = RESULTS_DIR / "splits"
+    OUT_MODELS  = RESULTS_DIR / "models"
+    OUT_PREDS   = RESULTS_DIR / "predictions"
+    OUT_FIGS    = RESULTS_DIR / "figures"
 
     for p in [OUT_SPLITS, OUT_MODELS, OUT_PREDS, OUT_FIGS]:
         p.mkdir(parents=True, exist_ok=True)
