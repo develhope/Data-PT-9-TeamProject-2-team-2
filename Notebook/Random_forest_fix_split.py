@@ -42,7 +42,7 @@ print(f"Dimensioni Test Set (X_test): {X_test.shape}")
 param_dist = {'n_estimators': sp_randint(200, 1000), 'max_depth': [10, 15, 20, 30, None],'min_samples_split': sp_randint(2, 11), 'min_samples_leaf': sp_randint(1, 11) }
 
 rf_base = RandomForestRegressor(random_state=42, n_jobs=-1)
-random_search = RandomizedSearchCV(estimator=rf_base, param_distributions=param_dist, n_iter=20, cv=3, scoring='r2', random_state=42, n_jobs=-1, verbose=2)
+random_search = RandomizedSearchCV(estimator=rf_base, param_distributions=param_dist, n_iter=30, cv=3, scoring='r2', random_state=42, n_jobs=-1, verbose=2)
 
 print("\nAvvio della ricerca sugli iperparametri.")
 random_search.fit(X_train, y_train)
@@ -59,12 +59,10 @@ X_TEST_PATH = '../data/results/X_test_for_evaluation.csv'
 Y_TEST_PATH = '../data/results/y_test_for_evaluation.csv'
 
 try:
-    # Salva il miglior modello
     with open(MODEL_PATH, 'wb') as file:
         pickle.dump(best_rf_model, file)
     print(f"\nModello Random Forest salvato in '{MODEL_PATH}'")
 
-    # Salva i dati di test
     X_test.to_csv(X_TEST_PATH, index=False)
     y_test.to_csv(Y_TEST_PATH, index=False, header=True)
     print(f"Dati di test salvati in '{X_TEST_PATH}' e '{Y_TEST_PATH}'")
