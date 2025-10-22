@@ -23,7 +23,7 @@ try:    # 1. CARICAMENTO DEL MODELLO RANDOM FOREST
     estimator = loaded_model.estimators_[0] 
     
     dot_file_path = os.path.join(GRAPH_DIR, 'tree_0.dot')
-    export_graphviz(estimator, out_file=dot_file_path, feature_names=feature_names,max_depth=4,label='none', node_ids=True, rounded=True, precision=1, filled=True, proportion=False,special_characters=True)
+    export_graphviz(estimator, out_file=dot_file_path, feature_names=feature_names,max_depth=3,label='none', node_ids=True, rounded=True, precision=1, filled=True, proportion=False,special_characters=True)
     print(f"\nAlbero decisionale esportato in formato DOT: '{dot_file_path}'")
     # 4. CONVERSIONE DEL FILE DOT IN PNG
     try:
